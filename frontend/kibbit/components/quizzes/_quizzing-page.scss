@@ -1,0 +1,68 @@
+$green: #8CD564;
+$red: #ED6B43;
+
+.QuizzingPage {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.Question {
+  .Question-title {
+    font-size: 24px;
+    padding: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    background-color: #fff;
+  }
+  .Question-answers {
+    & > * {
+      margin: 8px 0;
+    }
+  }
+}
+
+.Answer {
+
+  padding: 16px;
+
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  background-color: #fff;
+  transition: all ease-out 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  &.is-correct {
+    color: #FFF;
+    background-color: $green;
+  }
+  &.is-incorrect {
+    color: #fff;
+    background-color: $red;
+  }
+}
+
+.QuizFinished {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 24px;
+
+  .QuizFinished-correct {
+    font-size: 18px;
+    b {
+      color: $green;
+    }
+  }
+  .QuizFinished-incorrect {
+    font-size: 18px;
+    b {
+      color: $red;
+    }
+  }
+}
